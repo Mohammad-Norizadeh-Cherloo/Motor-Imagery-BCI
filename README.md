@@ -1,80 +1,107 @@
-# Motor-Imagery-BCI
+# Motor Imagery BCI: CSP and CSSP from Scratch
+<img width="1200" height="720" alt="motor imagery bci" src="https://github.com/user-attachments/assets/d0cbe377-9036-490a-a987-a51b57f4627f" />
 
-**From-scratch implementation of Common Spatial Pattern (CSP) and Common Spatio-Spectral Pattern (CSSP) for Motor Imagery based Brain-Computer Interfaces**
 
+**From-scratch Python implementations of Common Spatial Pattern (CSP) and Common Spatio-Spectral Pattern (CSSP) for EEG-based Motor Imagery Brain-Computer Interfaces (MI-BCI).**
+---
 **Author:** Mohammad Norizadeh Cherloo  
 Educator & Researcher in Machine Learning, Biomedical Signal Processing, and Brain-Computer Interfaces
 
 [![Website](https://img.shields.io/badge/Website-onlinebme.com-blue)](https://onlinebme.com/)
 [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Profile-green)](https://scholar.google.com/citations?user=fIKpYm8AAAAJ)
----
-
-### About Motor Imagery-based BCI
-
-In Motor Imagery Brain-Computer Interfaces (MI-BCI), the user imagines moving a part of the body (for example left hand, right hand, foot, or tongue) without any actual movement.  
-
-This mental task produces specific patterns in the EEG signals, mainly in the mu (8–12 Hz) and beta (13–30 Hz) frequency bands. The goal of an MI-BCI system is to detect these patterns and translate them into control commands.
-
-One of the most important and widely used methods for feature extraction in Motor Imagery EEG is the **Common Spatial Pattern (CSP)** algorithm and its improved versions.
 
 ---
 
-### Methods Implemented in This Repository
+## Overview
+<img width="1200" height="445" alt="csp-and-eeg-signal" src="https://github.com/user-attachments/assets/cf4eeafb-78ed-4494-a2f7-8811e6757d17" />
 
-#### 1. Common Spatial Pattern (CSP)
+This repository contains **from-scratch implementations of classical EEG signal processing and machine learning methods for Motor Imagery BCI**.
 
-CSP is a supervised spatial filtering method that finds spatial filters which maximize the variance of one class while minimizing the variance of the other class.
+The current projects implement:
 
-After applying CSP filters, the variance of the filtered signals is used as a discriminative feature for classification.
+* **Common Spatial Pattern (CSP)**
+* **Common Spatio-Spectral Pattern (CSSP)**
+* **Support Vector Machine (SVM)** for classification
 
-**Key idea of CSP:**
-- Maximize variance of Class 1 → Minimize variance of Class 2
-- Maximize variance of Class 2 → Minimize variance of Class 1
-
-#### 2. Common Spatio-Spectral Pattern (CSSP)
-
-CSSP is an improved version of CSP.  
-While standard CSP only considers spatial information, CSSP also incorporates spectral information, which usually leads to better classification performance in Motor Imagery tasks.
+The implementations are designed to expose the mathematical and computational steps of the algorithms rather than relying on specialized BCI libraries.
 
 ---
 
-### Contents
+## Projects
 
-- `CSP_SVM.ipynb` → Implementation of CSP + SVM
-- `CSSP_SVM.ipynb` → Implementation of CSSP + SVM
-- `dataset/` → Place the BCI Competition III Dataset IVa here
+### 1. Common Spatial Pattern (CSP) + SVM
 
----
+CSP is a widely used spatial filtering method for **motor imagery EEG classification**. It learns spatial filters that maximize the variance difference between two EEG classes.
 
-### Dataset
-
-This repository uses the **BCI Competition III - Dataset IVa**.
-
-- Dataset description: [https://www.bbci.de/competition/iii/desc_IVa.html](https://www.bbci.de/competition/iii/desc_IVa.html)
-- Download page: [https://www.bbci.de/competition/iii/#data_set_iva](https://www.bbci.de/competition/iii/#data_set_iva)
-
-After downloading, put the `.mat` files inside the `dataset` folder.
+👉 **[Open CSP + SVM Code](project01_CSP_SVM.ipynb)**
 
 ---
 
-### Requirements
+### 2. Common Spatio-Spectral Pattern (CSSP) + SVM
+
+CSSP extends CSP by incorporating spectral information into the spatial filtering framework for **motor imagery EEG classification**.
+
+👉 **[Open CSSP + SVM Code](project02_CSSP_SVM.ipynb)**
+
+---
+
+## Dataset
+
+The implementations use the **BCI Competition III – Dataset IVa**, a benchmark dataset for EEG-based motor imagery BCI research.
+
+* [Dataset IVa — Official Description](https://www.bbci.de/competition/iii/desc_IVa.html)
+* [Dataset IVa — Download](https://www.bbci.de/competition/iii/#data_set_iva)
+
+Place the downloaded dataset in:
+
+```text
+dataset/
+```
+
+---
+
+## Repository Structure
+
+```text
+Motor-Imagery-BCI/
+│
+├── dataset/
+│
+├── project01_CSP_SVM.ipynb
+├── project02_CSSP_SVM.ipynb
+└── README.md
+```
+
+---
+
+## Requirements
 
 ```bash
 pip install numpy scipy scikit-learn matplotlib
 ```
 
-### Full Video Courses
-
-All mathematical derivations, whiteboard explanations, and step-by-step coding sessions are available here:
-
-**→ [OnlineBME – Motor-Imagery-based BCI Course](https://onlinebme.com/product/brain-computer-interface-package-motorimagery/)**
+The notebooks can be opened and executed using **Jupyter Notebook, JupyterLab, or Google Colab**.
 
 ---
 
-### Contact
+## Related Research
 
-- Website: [https://onlinebme.com](https://onlinebme.com)  
-- Google Scholar: [Mohammad Norizadeh Cherloo](https://scholar.google.com/citations?user=fIKpYm8AAAAJ)  
-- GitHub: [Mohammad-Norizadeh-Cherloo](https://github.com/Mohammad-Norizadeh-Cherloo)
+This repository is related to my research on **motor imagery EEG classification, spatial filtering, and brain-computer interfaces**.
+
+**Ensemble Regularized Common Spatio-Spectral Pattern (Ensemble RCSSP) Model for Motor Imagery-Based EEG Signal Classification**
+
+*Computers in Biology and Medicine, 2021.*
+
+[Read the paper](https://doi.org/10.1016/j.compbiomed.2021.104546)
 
 ---
+
+## Full Video Course
+
+For a detailed, project-based treatment of **EEG signal processing for Motor Imagery BCI**, including **CSP, FBCSP, spatial filtering, feature extraction, classification, and practical implementations on real BCI Competition datasets**, see:
+
+**→ [OnlineBME – Motor Imagery-based BCI](https://onlinebme.com/product/brain-computer-interface-package-motorimagery/)**
+
+---
+
+**If you find the repository useful, consider ⭐ starring it.**
