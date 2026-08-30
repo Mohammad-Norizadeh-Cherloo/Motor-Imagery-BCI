@@ -5,14 +5,13 @@
 **From-scratch Python implementations of Common Spatial Pattern (CSP) and Common Spatio-Spectral Pattern (CSSP) for EEG-based Motor Imagery Brain-Computer Interfaces (MI-BCI).**
 ---
 **Author:** Mohammad Norizadeh Cherloo  
-Educator & Researcher in Machine Learning, Biomedical Signal Processing, and Brain-Computer Interfaces
+Educator & Researcher in Machine Learning, Deep Learning, Neural Decoding, Biomedical Signal Processing, and Brain-Computer Interfaces
 
 [![Website](https://img.shields.io/badge/Website-onlinebme.com-blue)](https://onlinebme.com/)
 [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Profile-green)](https://scholar.google.com/citations?user=fIKpYm8AAAAJ)
 [![YouTube](https://img.shields.io/badge/YouTube-@Mrcherloo-red)](https://www.youtube.com/@Mrcherloo)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue)](https://www.linkedin.com/in/mohammad-norizadeh-cherloo/)
 ---
-
 ## Overview
 <img width="1200" height="445" alt="csp-and-eeg-signal" src="https://github.com/user-attachments/assets/cf4eeafb-78ed-4494-a2f7-8811e6757d17" />
 
